@@ -20,12 +20,12 @@ async function routes (fastify, options) {
      var resu= stringify(result.data)
       // console.log(resu)
       // var dt=toJSON(resu)
-      // await axios.post('https://webhooks.mongodb-realm.com/api/client/v2.0/app/weavy-settlefirst-jnjtl/service/hooks/incoming_webhook/response-signdesk-esign',result.data,{
-      //   headers:{
-      //     "Content-Type":"application/json"
-      //   }
-      // })
-      await reply.send(resu)
+      var resp=await axios.post('https://webhooks.mongodb-realm.com/api/client/v2.0/app/weavy-settlefirst-jnjtl/service/hooks/incoming_webhook/response-signdesk-esign',result.data,{
+        headers:{
+          "Content-Type":"application/json"
+        }
+      })
+      await reply.send(resp)
 
       // await reply.send("done")
     })
