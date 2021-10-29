@@ -16,8 +16,9 @@ async function routes (fastify, options) {
               "Content-Type":"application/json",
           }
       })
+      console.log(result.data)
      var resu= stringify(result.data)
-    //  console.log(resu)
+      // console.log(resu)
       // var dt=toJSON(resu)
       // await axios.post('https://webhooks.mongodb-realm.com/api/client/v2.0/app/weavy-settlefirst-jnjtl/service/hooks/incoming_webhook/response-signdesk-esign',result.data,{
       //   headers:{
